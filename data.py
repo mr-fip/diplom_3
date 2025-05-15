@@ -1,10 +1,10 @@
 class Data:
     
-    info_text_in_profile_page = 'В этом разделе вы можете изменить свои персональные данные'
-    text_order_acceptance_notification = 'Ваш заказ начали готовить'
-    text_title_on_constructor_form = 'Соберите бургер'
-    text_title_on_feed_form = 'Лента заказов'
-    text_module_feed = 'Cостав'
+    INFO_TEXT_IN_PROFILE_PAGE = 'В этом разделе вы можете изменить свои персональные данные'
+    TEXT_ORDER_ACCEPTANCE_NOTIFICATION = 'Ваш заказ начали готовить'
+    TEXT_TITLE_ON_CONSTRUCTOR_FORM = 'Соберите бургер'
+    TEXT_TITLE_ON_FEED_FORM = 'Лента заказов'
+    TEXT_MODULE_FEED = 'Cостав'
     
     USER_CREDENTIALS = {"email": "test-mail16@yandex.ru", "password": "12345678owl", "name": "Owl"}
     EMAIL_FOR_RECOVERY = 'sip.tlife@yandex.ru'
