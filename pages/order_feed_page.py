@@ -8,14 +8,14 @@ class OrderFeedPage(BasePage):
     
     def __init__(self, driver):
         super().__init__(driver)
-        self.url = Url.order_feed_page_url
+        self.url = Url.ORDER_FEED_PAGE_URL
         self.locators = OrderFeedPageLocators()
 
     @allure.step("Проверка текста заголовка ленты заказов")
     def check_text_on_feed_title(self):
         self.wait_visibility_of_element(self.locators.FEED_TITLE)
         tex_title_form_feed = self.get_text_element(self.locators.FEED_TITLE)
-        return tex_title_form_feed == Data.text_title_on_feed_form
+        return tex_title_form_feed == Data.TEXT_TITLE_ON_FEED_FORM
 
     @allure.step("Нажатие на карточку заказа")
     def click_on_order_card(self):
@@ -25,7 +25,7 @@ class OrderFeedPage(BasePage):
     def check_text_order_in_modal(self):
         self.wait_modal_opened(self.locators.ORDER_MODAL)
         order_text = self.get_text_element(self.locators.ORDER_TEXT_IN_ORDER_MODAL)
-        return order_text == Data.text_module_feed
+        return order_text == Data.TEXT_MODULE_FEED
 
     @allure.step("Получение общего количества заказов")
     def get_total_orders_count(self):

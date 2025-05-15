@@ -8,14 +8,14 @@ class ProfilePage(BasePage):
 
     def __init__(self, driver):
         super().__init__(driver)
-        self.url = Url.profile_page_url
+        self.url = Url.PROFILE_PAGE_URL
         self.locators = ProfilePageLocators()
 
     @allure.step("Проверка корректности текста информации профиля")
     def is_profile_info_text_correct(self):
         self.wait_visibility_of_element(self.locators.ACCOUNT_TEXT_IN_PROFILE)
         actual_text = self.get_text_element(self.locators.ACCOUNT_TEXT_IN_PROFILE)
-        return actual_text == Data.info_text_in_profile_page
+        return actual_text == Data.INFO_TEXT_IN_PROFILE_PAGE
 
     @allure.step("Нажатие на кнопку 'История заказов' в профиле")
     def click_on_history_order_button(self):

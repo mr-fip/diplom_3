@@ -7,7 +7,7 @@ class LoginPage(BasePage):
     
     def __init__(self, driver):
         super().__init__(driver)
-        self.url = Url.login_page_url
+        self.url = Url.LOGIN_PAGE_URL
         self.locators = LoginPageLocators()
 
     @allure.step("Нажатие на ссылку 'Забыли пароль'")

@@ -9,7 +9,7 @@ class MainPage(BasePage):
     
     def __init__(self, driver):
         super().__init__(driver)
-        self.url = Url.main_page_url
+        self.url = Url.MAIN_PAGE_URL
         self.locators = MainPageLocators()
 
     @allure.step("Нажатие на кнопку перехода в профиль")
@@ -44,13 +44,13 @@ class MainPage(BasePage):
     def check_text_on_constructor_title(self):
         self.wait_visibility_of_element(self.locators.CONSTRUCTOR_TITLE)
         tex_title_form_constructor = self.get_text_element(self.locators.CONSTRUCTOR_TITLE)
-        return tex_title_form_constructor == Data.text_title_on_constructor_form
+        return tex_title_form_constructor == Data.TEXT_TITLE_ON_CONSTRUCTOR_FORM
 
     @allure.step("Проверка текста уведомления о принятии заказа")
     def check_text_order_acceptance_notification(self):
         self.wait_modal_opened(self.locators.MODAL_OPENED)
         notification_text = self.get_text_element(self.locators.ORDER_ACCEPTANCE_NOTIFICATION)
-        return notification_text == Data.text_order_acceptance_notification
+        return notification_text == Data.TEXT_ORDER_ACCEPTANCE_NOTIFICATION
 
     @allure.step("Проверка видимости изображения булки в модальном окне")
     def is_image_bun_in_module_window_visible(self):

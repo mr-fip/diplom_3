@@ -7,7 +7,7 @@ class ForgotPasswordPage(BasePage):
     
     def __init__(self, driver):
         super().__init__(driver)
-        self.url = Url.forgot_password_url
+        self.url = Url.FORGOT_PASSWORD_URL
         self.locators = ForgotPasswordPageLocators()
 
     @allure.step("Заполнение формы восстановления email: {email}")
